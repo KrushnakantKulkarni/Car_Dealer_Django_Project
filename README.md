@@ -62,8 +62,6 @@ Dealers add new cars with details like model, price, and availability.
 | **Frontend** | HTML, CSS, JavaScript, Bootstrap |
 | **Backend** | Django (Python) |
 | **Database** | MySQL / PostgreSQL |
-| **Deployment** | AWS / Heroku / DigitalOcean |
-
 ---
 
 ## **🚀 Installation & Setup**  
