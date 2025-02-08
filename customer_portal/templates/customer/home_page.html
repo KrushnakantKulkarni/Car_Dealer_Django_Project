@@ -1,0 +1,31 @@
+{% extends 'customer/base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-large w3-black w3-padding">
+  <div class="w3-bar-item w3-left">🚗 <b>Customer Portal:</b> {{ user.username }}</div>
+  <a class="w3-bar-item w3-button w3-teal w3-hover-light-blue w3-right w3-round" href="/customer_portal/logout/">Logout</a>
+  <a class="w3-bar-item w3-button w3-teal w3-hover-light-blue w3-right w3-round" href="/customer_portal/manage/">Manage</a>
+</div>
+
+<!-- Welcome Message -->
+<div class="w3-container w3-center w3-large w3-padding-32 w3-animate-opacity">
+  <h2 class="w3-text-teal"><b>Welcome Traveller!</b></h2>
+  <p class="w3-large w3-text-dark-grey">Get ready to drive the car of your dreams 🚘</p>
+</div>
+
+<!-- Hero Section -->
+<div class="w3-display-container w3-center" style="height: 500px; padding: 20px; position: relative;">
+  <img src="{% static 'images/car-pics.jpg' %}" class="w3-image w3-round-large w3-card" style="max-width: 100%; height: auto; filter: brightness(75%);">
+  
+  <!-- Search Button Overlay -->
+  <div class="w3-display-middle">
+    <a class="w3-button w3-red w3-xlarge w3-round-large w3-hover-opacity w3-padding-large" href="/customer_portal/search/" 
+       style="box-shadow: 0 5px 10px rgba(0,0,0,0.3); transition: 0.3s;">
+      <b>🔍 Search for Rental Cars</b>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

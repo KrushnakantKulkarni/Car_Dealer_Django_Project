@@ -1,0 +1,46 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+  <!-- Header Section -->
+  <header class="w3-bar w3-teal w3-padding-16">
+    <div class="w3-container w3-left">
+      <h1 class="w3-xlarge w3-text-white">Error</h1>
+    </div>
+    <div class="w3-container w3-right">
+      <a href="/" class="w3-btn w3-dark-grey w3-hover-opacity">Home</a>
+      <a href="/customer_portal/login/" class="w3-btn w3-dark-grey w3-hover-opacity">Login</a>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="w3-container w3-padding-32 w3-center">
+    <div class="w3-card-4 w3-red w3-padding-32 w3-round w3-margin-bottom">
+      <h2 class="w3-white">Username Already Exists</h2>
+      <p class="w3-large w3-text-white">Oops! The username you entered is already taken. Please choose a different one.</p>
+      <p class="w3-large w3-text-white">You can try logging in with your existing credentials. <a href="/customer_portal/login/" class="w3-btn w3-teal w3-hover-opacity">Go to Login Page</a></p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="w3-container w3-teal w3-padding-32 w3-center">
+    <div class="w3-row">
+      <div class="w3-col m6 l4">
+        <h4 class="w3-white">Contact Us</h4>
+        <p class="w3-white">For support, contact our team for assistance. Email: support@cardealer.com | Phone: +123 456 7890</p>
+      </div>
+      <div class="w3-col m6 l4">
+        <h4 class="w3-white">Follow Us</h4>
+        <p>
+          <a href="#" class="w3-hover-opacity w3-text-white"><i class="fa fa-facebook-official w3-xlarge"></i></a>
+          <a href="#" class="w3-hover-opacity w3-text-white"><i class="fa fa-twitter w3-xlarge"></i></a>
+          <a href="#" class="w3-hover-opacity w3-text-white"><i class="fa fa-instagram w3-xlarge"></i></a>
+        </p>
+      </div>
+      <div class="w3-col m6 l4">
+        <h4 class="w3-white">About Us</h4>
+        <p class="w3-white">We are here to help you with the best service and support.</p>
+      </div>
+    </div>
+  </footer>
+
+{% endblock %}

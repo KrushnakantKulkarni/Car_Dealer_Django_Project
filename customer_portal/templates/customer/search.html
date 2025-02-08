@@ -1,0 +1,31 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+  <!-- Customer Portal Header -->
+  <header class="w3-bar w3-teal w3-padding-16">
+    <div class="w3-container w3-left">
+      <h1 class="w3-xlarge w3-text-white">Customer Portal: {{ user.username }}</h1>
+    </div>
+    <div class="w3-container w3-right">
+      <a href="/customer_portal/logout/" class="w3-btn w3-dark-grey w3-hover-opacity">Logout</a>
+      <a href="/customer_portal/manage/" class="w3-btn w3-dark-grey w3-hover-opacity">Manage</a>
+    </div>
+  </header>
+
+  <!-- Search Form Section -->
+  <div class="w3-container w3-padding-32 w3-center" style="min-height: calc(100vh - 160px);">
+    <div class="w3-card-4 w3-padding-32 w3-round w3-shadow-large">
+      <h3 class="w3-text-teal">Search for Cars</h3>
+      <form class="w3-container" action="/customer_portal/search_results/" method="post">
+        {% csrf_token %}
+        <div class="w3-margin-bottom">
+          <label for="city" class="w3-text-teal">Enter City Name:</label>
+          <input id="city" class="w3-input w3-border w3-round" type="text" name="city" placeholder="Enter city" required pattern="[A-Za-z\s]+" title="City name should only contain letters and spaces.">
+        </div>
+        <div class="w3-center">
+          <input class="w3-btn w3-green w3-hover-opacity w3-round-large" type="submit" value="Search Car">
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

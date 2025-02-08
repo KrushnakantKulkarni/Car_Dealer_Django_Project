@@ -1,0 +1,14 @@
+{% extends 'customer/base.html' %}
+{% block content %}
+<div class="w3-center" style="margin-top: 50px;">
+  <div style="padding: 30px; background: white; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); width: 50%; text-align: center;">
+    <h2 style="color: red; font-size: 26px; margin-bottom: 10px;">SORRY!</h2>
+    <h4 style="color: black; font-size: 20px; margin-bottom: 15px;">Wrong Credentials</h4>
+    <p style="color: gray; font-size: 16px; margin-bottom: 20px;">The username or password you entered is incorrect. Please try again.</p>
+    <a href="/car_dealer_portal/login/" 
+       style="display: inline-block; padding: 12px 20px; font-size: 18px; color: white; background: teal; border-radius: 8px; text-decoration: none; transition: 0.3s;">
+      Go Back to Login
+    </a>
+  </div>
+</div>
+{% endblock %}
